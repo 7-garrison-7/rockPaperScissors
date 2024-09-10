@@ -1,5 +1,8 @@
 // console.log("Hello World");
 
+let humanScore = 0;
+let computerScore = 0;
+
 function getComputerChoice() {
     const rand = Math.random();
     if (rand <= (1/3)) {
@@ -14,6 +17,7 @@ function getComputerChoice() {
 function getHumanChoice() {
     return(prompt("Choice: "));
 }
+
 
 console.log(getHumanChoice());
 
