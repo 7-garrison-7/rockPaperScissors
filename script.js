@@ -11,4 +11,10 @@ function getComputerChoice() {
     }
 }
 
+function getHumanChoice() {
+    return(prompt("Choice: "));
+}
+
+console.log(getHumanChoice());
+
 // console.log(getComputerChoice());
