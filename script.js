@@ -18,7 +18,35 @@ function getHumanChoice() {
     return(prompt("Choice: "));
 }
 
+function playRound(humanChoice, computerChoice) {
+    
+    // win
+    if (humanChoice == "paper" && computerChoice == "rock") {
+        console.log("You win! Paper beats rock");
+        humanScore++;
+    } else if (humanChoice == "rock" && computerChoice == "scissors") {
+        console.log("You win! Rock beats scissors");
+        humanScore++;
+    } else if (humanChoice == "scissors" && computerChoice == "paper") {
+        console.log("You win! Scissors beat paper");
+        humanScore++;
+    }
 
-console.log(getHumanChoice());
+
+    // lose
+    if (computerChoice == "paper" && humanChoice == "rock") {
+        console.log("You lose! Paper beats rock");
+        computerScore++;
+    } else if (computerChoice == "rock" && humanChoice == "scissors") {
+        console.log("You lose! Rock beats scissors");
+        computerScore++;
+    } else if (computerChoice == "scissors" && humanChoice == "paper") {
+        console.log("You lose! Scissors beat paper");
+        computerScore++;
+    }
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
 
 // console.log(getComputerChoice());
