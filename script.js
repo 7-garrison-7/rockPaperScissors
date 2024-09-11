@@ -1,5 +1,3 @@
-// console.log("Hello World");
-
 let humanScore = 0;
 let computerScore = 0;
 
@@ -26,7 +24,7 @@ function playGame() {
         
         let message;
 
-        // win
+        // Logic calculation
         if (humanChoice == "paper" && computerChoice == "rock") {
             humanScore++;
             message = "You win! Paper beats rock";
@@ -49,9 +47,12 @@ function playGame() {
             message = "Tie!";
         }
 
-        console.log(message + "\nYour score: " + humanScore + "\nComputer score: " + computerScore);
+        // Output winner and score
+        let postRoundMsg = message + "\nYour score: " + humanScore + "\nComputer score: " + computerScore;
+        console.log(postRoundMsg);
     }
     
+    // play 5 rounds
     for (let i = 0; i < 5; i++) {
         const humanSelection = getHumanChoice();
         const computerSelection = getComputerChoice();
