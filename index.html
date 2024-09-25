@@ -5,11 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="./script.js" defer></script>
+    <style>
+        * {
+            font-family: 'Courier New', Courier, monospace;
+        }
+        button {
+            padding: 24px;
+            border-radius: 24px;
+            border: 8px solid darkblue;
+            color: white;
+            background-color: rgb(99, 99, 240);
+            flex-basis: 150px;
+            
+        }
+
+        #button-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+        }
+
+        #layout {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            flex-direction: column;
+        }
+    </style>
 </head>
 <body>
-    <button id="rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissors">Scissors</button>
-    <div id="results"></div>
+    <div id="layout">
+        <div id="button-container">
+            <button id="rock">Rock</button>
+            <button id="paper">Paper</button>
+            <button id="scissors">Scissors</button>
+        </div>
+        <div id="results"></div>
+    </div>
 </body>
 </html>
