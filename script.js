@@ -50,11 +50,21 @@ function playGame() {
         console.log(postRoundMsg);
     }
     
-    for (let i = 0; i < 5; i++) {
-        const humanSelection = getHumanChoice();
-        const computerSelection = getComputerChoice();
-        playRound(humanSelection, computerSelection);
-    }
+    const rockBut = document.querySelector('#rock');
+    const paperBut = document.querySelector('#paper');
+    const scissorsBut = document.querySelector('#scissors');
+
+    rockBut.addEventListener('click', () => {
+        playRound("rock");
+    });
+
+    paperBut.addEventListener('click', () => {
+        playRound("paper");
+    });
+
+    scissorsBut.addEventListener('click', () => {
+        playRound("scissors");
+    });
 }
 
 playGame();
