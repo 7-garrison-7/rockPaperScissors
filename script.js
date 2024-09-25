@@ -12,9 +12,23 @@ function getComputerChoice() {
     }
 }
 
+const rockBut = document.getElementById('rock');
+const paperBut = document.querySelector('#paper');
+const scissorsBut = document.querySelector('#scissors');
 
+rockBut.addEventListener('click', () => {
+    playRound("rock", getComputerChoice());
+});
 
-function playGame() {
+paperBut.addEventListener('click', () => {
+    playRound("paper", getComputerChoice());
+});
+
+scissorsBut.addEventListener('click', () => {
+    playRound("scissors", getComputerChoice());
+});
+
+// function playGame() {
 
     function getHumanChoice() {
         return(prompt("Choice: "));
@@ -50,21 +64,9 @@ function playGame() {
         console.log(postRoundMsg);
     }
     
-    const rockBut = document.querySelector('#rock');
-    const paperBut = document.querySelector('#paper');
-    const scissorsBut = document.querySelector('#scissors');
 
-    rockBut.addEventListener('click', () => {
-        playRound("rock");
-    });
 
-    paperBut.addEventListener('click', () => {
-        playRound("paper");
-    });
 
-    scissorsBut.addEventListener('click', () => {
-        playRound("scissors");
-    });
-}
+// }
 
-playGame();
+// playGame();
