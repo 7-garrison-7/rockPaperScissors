@@ -12,9 +12,11 @@ function getComputerChoice() {
     }
 }
 
-const rockBut = document.getElementById('rock');
+const rockBut = document.querySelector('#rock');
 const paperBut = document.querySelector('#paper');
 const scissorsBut = document.querySelector('#scissors');
+
+const results = document.querySelector('#results');
 
 rockBut.addEventListener('click', () => {
     playRound("rock", getComputerChoice());
@@ -61,7 +63,7 @@ scissorsBut.addEventListener('click', () => {
         }
 
         let postRoundMsg = message + "\nYour score: " + humanScore + "\nComputer score: " + computerScore;
-        console.log(postRoundMsg);
+        results.textContent = postRoundMsg;
     }
     
 
